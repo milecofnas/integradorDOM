@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" />
+    <title>Integrador DOM</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="table-wrapper">
+            <nav>
+                <p>Manage <span>Employees</span></p>
+                <button class="btnNav"><i class="material-icons">&#xE147;</i>Add New Employee</button>
+            </nav>
+            <div class="table-row">
+                <form action="get">
+                    <input type="text" placeholder="Filter..." class="filtro">
+                </form>
+            </div>
+            <table class="tabla">
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="checkbox">
+                                <input type="checkbox" id="acepto" name="acepto">
+                                <label for="acepto"><span></span></label>
+                            </div>
+                        </th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Adress</th>
+                        <th>Phone</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="table-content">
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="modal-container noMostrar">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <h4 class="modal-title">Add Employees</h4>
+                    <button class="cerrar-modal close">X</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-grup">
+                        <label>Name</label>
+                        <input type="text" id="name" class="form-control">
+                    </div>
+                    <div class="form-grup">
+                        <label>Email</label>
+                        <input type="text" id="email" class="form-control">
+                    </div>
+                    <div class="form-grup">
+                        <label>Adress</label>
+                        <textarea id="adress" class="form-control"></textarea>
+                    </div>
+                    <div class="form-grup">
+                        <label>Phone</label>
+                        <input type="text" id="phone" class="form-control">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default close">Cancel</button>
+                    <input type="submit" value="Add" class="btn btn-success">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+
+    <script src="main.js"></script>
+</body>
+
+</html>
